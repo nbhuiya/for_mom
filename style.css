@@ -253,6 +253,8 @@ button:hover{
     padding:60px;
     border-radius:30px;
     margin:50px 0;
+    margin-left:auto;
+    margin-right:auto;
     box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
@@ -614,4 +616,15 @@ button:hover{
         transform: scale(0);
         opacity: 0;
     }
+}
+
+#finalPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.final-content{
+    text-align: left;
 }
