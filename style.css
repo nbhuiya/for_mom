@@ -618,13 +618,35 @@ button:hover{
     }
 }
 
+/* FINAL PAGE MOBILE + DESKTOP CENTER FIX */
+
 #finalPage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     min-height: 100vh;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .final-content{
+    width: fit-content;
     text-align: left;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    #finalPage{
+        padding: 30px;
+    }
+
+    .final-content{
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
