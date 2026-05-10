@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Mom ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<audio id="bgMusic" loop>
+    <source src="music/song.mpeg" type="audio/mp3">
+</audio>
+
+<body>
+
+    <!-- PAGE 1 -->
+
+    <section id="homePage" class="page active">
+
+        <div class="hero">
+
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+
+                <img src="images/gift.png" id="giftBox" class="gift-image">
+
+                <p class="tap-text">Tap The Gift 🎁</p>
+
+                <h1>
+                    A Little Surprise <br>
+                    For The Best Mom ❤️
+                </h1>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+   <!-- PAGE 2 -->
+
+<section id="letterPage" class="page">
+
+    <div class="simple-page">
+
+        <div class="floating-letter-area">
+
+            <p class="tap-jump">
+                Tap Here ↓
+            </p>
+
+            <div class="letter-emoji" onclick="showLetterPhoto()">
+                💌
+            </div>
+
+            <img
+                src="images/memory1.jpg"
+                class="hidden-photo"
+                id="hiddenPhoto"
+            >
+
+        </div>
+
+        <h2 class="letter-heading">
+            Someone Wants <br>
+            To Tell You Something ❤️
+        </h2>
+
+        <button class="read-btn" onclick="openLetter()">
+            Want To Read ? 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- PAGE 3 -->
+
+    <section id="messagePage" class="page">
+
+        <div class="letter-card">
+
+            <h1>Mamma ❤️</h1>
+
+            <p>
+                Thank you for never letting me give up,
+                even during the toughest phases of life.
+            </p>
+
+            <p>
+                Thank you for not blindly supporting every decision I made,
+                but instead correcting me whenever I was wrong,
+                even if it meant scolding me.
+            </p>
+
+            <p>
+                Thank you for protecting me from the world
+                before I even understood how cruel it could be.
+            </p>
+
+            <p>
+                You knew me 9 months before the world did,
+                and even today nobody understands me the way you do.
+            </p>
+
+            <p>
+                Thank you for never forcing me into household responsibilities
+                when I had exams,
+                and instead scolding me whenever I entered the kitchen
+                to waste time.
+            </p>
+
+            <p>
+                But still,
+                whenever I wanted to cook out of love or happiness,
+                you always allowed me to do it.
+            </p>
+
+            <p>
+                You didn’t just allow me to dream,
+                you pushed me towards becoming someone special,
+                someone beyond ordinary.
+            </p>
+
+            <p>
+                I know you’ll probably scold me for making all this,  
+                but how could I miss a chance to make something for the person  
+                who made my whole world magical!! ❤️
+            </p>
+
+            <p>
+                Whatever strength I have today,
+                a huge part of it is because of you.
+            </p>
+
+            <div class="sign">
+                <p>With Love,</p>
+                <p>From Shona Mamma ❤️</p>
+            </div>
+
+            <button onclick="openMemoryPage()">
+                Next ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PAGE 4 -->
+
+    <section id="memoryPage" class="page">
+
+        <div class="memory-container">
+
+            <h1>Then → Now ❤️</h1>
+
+            <div class="memory-cards">
+
+                <div class="flip-card" onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            <h2>THEN</h2>
+                        </div>
+
+                        <div class="flip-back">
+                            <img src="images/then.jpg">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="flip-card" onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            <h2>NOW</h2>
+                        </div>
+
+                        <div class="flip-back">
+                            <img src="images/now.jpg">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button onclick="openPoemPage()">
+                One Final Surprise ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PAGE 5 -->
+
+    <section id="poemPage" class="page">
+
+        <div class="poem-card">
+
+            <h1>Pyari Mamma ❤️</h1>
+
+            <div class="poem">
+
+                <p>
+                    मन करता है आपकी बाँहों में सिर रखकर सो जाऊँ,  <br>
+                    पर डरती हूँ कहीं आपके सपने ना पूरे कर पाऊँ।  
+                </p>
+
+                <p>
+                    हो चाहे मैं मीलों दूर आपसे,   <br>
+                    पर आपकी सीख ही तो हिम्मत बन चलती है मेरे हर रास्ते। 
+                </p>
+
+                <p>
+                    पता है मुझे आप भी डरती हो हर रात,  <br>
+                    और सहलाना चाहती हो मुझपे हर दिन अपने ये हाथ।  
+                </p>
+
+                <p>
+                    लेकिन क्या करें,  <br>
+                    कामयाबी माँ के आँचल में जो नहीं आती...  <br>
+                    और मेरी कामयाबी देख तुम फूलों नहीं समाती।  
+                </p>
+
+                <p>
+                    "Mamma you know I am strong,<br>
+                    you know I am brave,<br>
+                    you know I am sensible,<br>
+                    and you know your shona mamma will do this."
+                </p>
+
+            </div>
+
+            <p class="pop-text">Pop The Balloons 🎈</p>
+
+            <div class="balloon-area">
+
+                <div class="balloon" onclick="showPhoto(1)">
+                    🎈
+                </div>
+
+                <div class="balloon" onclick="showPhoto(2)">
+                    🎈
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-popup" id="photo1">
+
+            <div class="photo-card rotate-left">
+
+                <img src="images/childhood.jpg">
+
+                <p>
+                    No matter how much I grow,<br>
+                    I’ll always remain your little girl ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-popup" id="photo2">
+
+            <div class="photo-card rotate-right">
+
+                <img src="images/memory3.jpg">
+
+                <p>
+                    Still finding peace in your lap,
+                    exactly like before ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+    <!-- FINAL PAGE -->
+
+<section class="page" id="finalPage">
+
+    <div class="final-container">
+
+        <h1>
+            HAPPY MOTHER'S DAY MAMMA 🎀🎉<br>
+            Thank You For Always Being There For Me 🤍
+        </h1>
+
+        <p>
+            — Your Dushtu
+        </p>
+
+    </div>
+
+</section>
+
+
+
+</body>
+</html>

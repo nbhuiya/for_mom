@@ -1,0 +1,618 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8ecef;
+    overflow-x:hidden;
+}
+
+
+
+/* PAGES */
+
+.page{
+    width:100vw;
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    overflow-y:auto;
+}
+
+.page.active{
+    display:flex;
+}
+
+
+
+/* HERO */
+
+.hero{
+    width:100vw;
+    height:100vh;
+    background-image:url('images/bg.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(4px);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.gift-image{
+    width:170px;
+    cursor:pointer;
+    transition:1.2s ease;
+}
+
+.tap-text{
+    margin-top:15px;
+    font-size:1.1rem;
+}
+
+.hero-content h1{
+    margin-top:20px;
+    font-size:5rem;
+    line-height:1.1;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.open-gift{
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+
+
+/* CONFETTI */
+
+.confetti-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:9999;
+}
+
+.confetti{
+    position:absolute;
+    top:-20px;
+    width:10px;
+    height:14px;
+    opacity:0.9;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-10vh)
+        rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(120vh)
+        rotate(720deg);
+        opacity:0;
+    }
+}
+
+
+
+/* PAGE 2 */
+
+/* LETTER SECTION */
+
+.simple-page{
+    width:100%;
+    min-height:100vh;
+    background:#f8ecef;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:40px 20px;
+}
+
+.floating-letter-area{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.tap-jump{
+    font-size:1.3rem;
+    color:#ff4d79;
+    margin-bottom:15px;
+    animation:jump 1.2s infinite;
+    font-weight:600;
+}
+
+@keyframes jump{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.letter-emoji{
+    font-size:5rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.letter-emoji:hover{
+    transform:scale(1.1);
+}
+
+.hidden-photo{
+    width:260px;
+    border-radius:25px;
+    margin-top:20px;
+    display:none;
+    animation:fadePhoto 1s ease;
+}
+
+@keyframes fadePhoto{
+
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.letter-heading{
+    margin-top:30px;
+    font-size:4rem;
+    color:#4d5073;
+    line-height:1.1;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.read-btn{
+    margin-top:30px;
+}
+
+
+
+/* BUTTON */
+
+button{
+    padding:16px 34px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d79;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+
+/* LETTER */
+
+.letter-card{
+    width:90%;
+    max-width:800px;
+    background:white;
+    padding:60px;
+    border-radius:30px;
+    margin:50px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.letter-card h1{
+    text-align:center;
+    font-size:4rem;
+    color:#4d5073;
+    margin-bottom:30px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.letter-card p{
+    font-size:1.1rem;
+    line-height:2;
+    margin-bottom:25px;
+    color:#444;
+}
+
+.sign{
+    margin-top:40px;
+}
+
+.letter-card button{
+    display:block;
+    margin:40px auto 0;
+}
+
+
+
+/* MEMORY PAGE */
+
+.memory-container{
+    width:100%;
+    min-height:100vh;
+    background:#f8ecef;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.memory-container h1{
+    font-size:5rem;
+    color:#4d5073;
+    margin-bottom:50px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.memory-cards{
+    display:flex;
+    gap:60px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.flip-card{
+    width:260px;
+    height:380px;
+    perspective:1000px;
+    cursor:pointer;
+}
+
+.flip-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:1s;
+    transform-style:preserve-3d;
+}
+
+.flip-card.flipped .flip-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    overflow:hidden;
+    backface-visibility:hidden;
+}
+
+.flip-front{
+    background:#f7dbe3;
+    color:#4d5073;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flip-front h2{
+    font-size:3rem;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.flip-back{
+    transform:rotateY(180deg);
+}
+
+.flip-back img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.memory-container button{
+    margin-top:50px;
+}
+
+
+
+/* POEM */
+
+.poem-card{
+    width:100%;
+    min-height:100vh;
+    background:#f8ecef;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.poem-card h1{
+    font-size:4.5rem;
+    color:#4d5073;
+    margin-bottom:30px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.poem{
+    max-width:900px;
+}
+
+.poem p{
+    font-size:1.2rem;
+    line-height:2.2;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.pop-text{
+    color:#ff4d79;
+    margin-top:20px;
+}
+
+.balloon-area{
+    display:flex;
+    gap:120px;
+    margin-top:40px;
+}
+
+.balloon{
+    font-size:5rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.balloon:hover{
+    transform:translateY(-10px);
+}
+
+
+
+/* PHOTO POPUP */
+
+.photo-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    animation:fadeIn 0.5s ease;
+}
+
+.photo-card{
+    width:320px;
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:popUp 0.6s ease;
+}
+
+.photo-card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.photo-card p{
+    margin-top:15px;
+    line-height:1.7;
+}
+
+.rotate-left{
+    transform:rotate(-6deg);
+}
+
+.rotate-right{
+    transform:rotate(6deg);
+}
+
+@keyframes popUp{
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .simple-page h2{
+        font-size:2.5rem;
+    }
+
+    .memory-container h1{
+        font-size:3rem;
+    }
+
+    .poem-card h1{
+        font-size:3rem;
+    }
+
+    .balloon-area{
+        gap:60px;
+    }
+
+    .balloon{
+        font-size:4rem;
+    }
+
+    .letter-card{
+        padding:30px;
+    }
+}
+
+/* LETTER EMOJI SECTION */
+
+.floating-letter-area{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.tap-jump{
+    font-size:1.3rem;
+    color:#ff4d79;
+    margin-bottom:12px;
+    animation:jump 1.2s infinite;
+    font-weight:600;
+}
+
+@keyframes jump{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.letter-emoji{
+    font-size:5rem;
+    cursor:pointer;
+    transition:0.3s;
+    user-select:none;
+}
+
+.letter-emoji:hover{
+    transform:scale(1.12);
+}
+
+.hidden-photo{
+    width:260px;
+    border-radius:25px;
+    margin-top:20px;
+    display:none;
+    animation:fadePhoto 1s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes fadePhoto{
+
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.balloon {
+    width: 90px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.balloon:hover {
+    transform: scale(1.05);
+}
+
+.balloon.pop {
+    animation: balloonPop 0.5s forwards;
+}
+
+@keyframes balloonPop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(1.25);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
