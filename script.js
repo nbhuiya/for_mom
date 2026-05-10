@@ -60,7 +60,7 @@ const giftBox = document.getElementById("giftBox");
 const bgMusic = document.getElementById("bgMusic");
 
 giftBox.addEventListener("click", () => {
-    
+
     bgMusic.play();
 
     giftBox.classList.add("open-gift");
@@ -191,7 +191,7 @@ balloons.forEach(balloon => {
 
                     showPage("finalPage");
 
-                }, 1800);
+                }, 3000);
 
             }
 
